@@ -1,0 +1,28 @@
+schema {
+    query: Query,
+    mutation: Mutation
+}
+
+type Query {
+    findUser(loginId: String!): User!
+    allUserEmail: [String!]!
+}
+
+
+type Address{
+    city: String
+    zipcode: String
+}
+
+type Mutation {
+    registerUser(loginId: String!, username: String!, email: String!, city: String!, zipcode: String!): User
+    deleteUser(loginId: String!): Boolean
+    getUserAddress(username: String!): Address
+}
+
+type User {
+    userId: String
+    username: String
+    email: String
+    address: Address
+}
