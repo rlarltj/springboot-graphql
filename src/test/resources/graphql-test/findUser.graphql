@@ -1,0 +1,6 @@
+query findUser($loginId: String!) {
+    findUser(loginId: $loginId){
+        username
+        email
+    }
+}
