@@ -1,6 +1,12 @@
 query findUser($loginId: String!) {
     findUser(loginId: $loginId){
+        loginId
         username
         email
+        address{
+            city
+            zipcode
+        }
+
     }
 }
